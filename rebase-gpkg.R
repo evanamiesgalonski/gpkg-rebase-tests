@@ -42,7 +42,8 @@ loc <- tibble(
 ) %>%
   ps_coords_to_sfc(crs = 26911)
 
-# function 2 - rebase (step 1) - reads and cleans modified files (returns nothing if rebase dir empty)
+# include function 2 as part of read_rebase?
+# function 2 - rebase - reads and cleans modified files (returns nothing if rebase dir empty)
 # would be good to have function sbf_load_gpkgs, and maybe even sbf_load_gpkg_rebase for this
 rebase_files <- list.files(rebase_dir, full.names = TRUE, recursive = TRUE, pattern = ".gpkg$")
 
@@ -63,7 +64,7 @@ if(length(rebase_files)) {
   
   # note: dput reproduction would occur here
   
-  # function - rebase (step 2) - matches rebased to og files based on name,
+  # function 3 - apply_rebase- matches rebased to og files based on name,
   # then joins rebased data based on provided key
   
   loc %<>% left_join(loc_rebased %>% as_tibble, by = key)  
