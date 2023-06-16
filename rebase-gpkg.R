@@ -12,10 +12,15 @@
 # of more complex meta data that connot be stored as columns:
 # (layer symbology, rendering, grouping, etc)
 
-# note 2: could also add a component that dputs the modifications after read in
-# that then gets sourced to reproduce the objects. this way there would be a
-# hard coded version of the meta data that's backed up (github) and we aren't
-# relying on some data sitting in a folder on dropbox.
+# note 2: need a procces to dput the modifications after read in
+# that then gets sourced to reproduce the objects. should actually do on 
+# initial workup, then code blocks get updated on each rebase. functions should 
+# operate on a separate file that contains hard coded symbology or label info, 
+# if no rebasable files are available then it should create template verisons 
+# in that file this way there would be a hard coded version of the meta data
+# that's backed up (github) and we aren't relying on some data sitting in a folder on dropbox.
+
+
 
 #### basic example of process: ####
 
